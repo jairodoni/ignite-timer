@@ -55,7 +55,11 @@ Você pode visualizar o layout do projeto no formato através [desse link](https
 #### **Web**
 <p align="center">
   <img alt="telasWeb" src=".github/screen01.png" width="100%">
+  <br />
+  <br />
   <img alt="telasWeb" src=".github/screen02.png" width="100%">
+  <br />
+  <br />
   <img alt="telasWeb" src=".github/screen03.png" width="100%">
 </p>
 
