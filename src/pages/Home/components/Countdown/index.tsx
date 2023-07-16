@@ -11,7 +11,8 @@ export function Countdown() {
     markCurrentCycleAsFinished,
   } = useCycle()
 
-  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
+  //  eslint-disable-next-line
+  const totalSeconds = activeCycle && activeCycle.minutesAmount ? activeCycle.minutesAmount * 60 : 0
   const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
 
   const minutesAmount = Math.floor(currentSeconds / 60)

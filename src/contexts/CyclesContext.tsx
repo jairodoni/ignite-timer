@@ -15,7 +15,7 @@ import { differenceInSeconds } from 'date-fns'
 
 interface CreateCycleData {
   task: string
-  minutesAmount: number
+  minutesAmount: number | null
 }
 
 interface CycleContextData {

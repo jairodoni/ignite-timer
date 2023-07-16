@@ -1,10 +1,32 @@
 import { useFormContext } from 'react-hook-form'
 import { useCycle } from '../../../../hooks/useCycle'
-import { FormContainer, MinutesAmountInput, TaskInput } from './styles'
+import { Plus, Minus } from 'phosphor-react'
+import {
+  ButtonMinutesAmount,
+  FormContainer,
+  MinutesAmountInput,
+  TaskInput,
+} from './styles'
 
 export function NewCycleForm() {
   const { activeCycle } = useCycle()
-  const { register } = useFormContext()
+  const { register, setValue, watch } = useFormContext()
+
+  function handlerMinutesAmountController(typeButton: 'plus' | 'minus') {
+    const currentValueMinutesAmount = watch('minutesAmount')
+
+    if (typeButton === 'plus') {
+      if (!currentValueMinutesAmount) {
+        setValue('minutesAmount', 5)
+      } else if (currentValueMinutesAmount < 60) {
+        setValue('minutesAmount', currentValueMinutesAmount + 5)
+      }
+    } else if (typeButton === 'minus') {
+      if (currentValueMinutesAmount && currentValueMinutesAmount !== 0) {
+        setValue('minutesAmount', currentValueMinutesAmount - 5)
+      }
+    }
+  }
 
   return (
     <FormContainer>
@@ -12,7 +34,7 @@ export function NewCycleForm() {
       <TaskInput
         id="task"
         list="task-suggestions"
-        placeholder="De um nome para o seu projeto"
+        placeholder="Dê um nome para o seu projeto"
         disabled={!!activeCycle}
         {...register('task')}
       />
@@ -23,15 +45,29 @@ export function NewCycleForm() {
         <option value="Batata"></option>
       </datalist>
       <label htmlFor="minutesAmount">durante</label>
-      <MinutesAmountInput
-        type="number"
-        id="minutesAmount"
-        placeholder="00"
-        step={5}
-        min={5}
-        max={60}
-        {...register('minutesAmount', { valueAsNumber: true })}
-      />
+      <div>
+        <ButtonMinutesAmount
+          type="button"
+          onClick={() => handlerMinutesAmountController('minus')}
+        >
+          <Minus size={16} />
+        </ButtonMinutesAmount>
+        <MinutesAmountInput
+          type="number"
+          id="minutesAmount"
+          placeholder="00"
+          step={5}
+          min={5}
+          max={60}
+          {...register('minutesAmount', { valueAsNumber: true })}
+        />
+        <ButtonMinutesAmount
+          type="button"
+          onClick={() => handlerMinutesAmountController('plus')}
+        >
+          <Plus size={16} />
+        </ButtonMinutesAmount>
+      </div>
       <span>minutos.</span>
     </FormContainer>
   )
