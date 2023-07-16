@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="todo" title="todo" src=".github/capa.png" />
+    <img alt="todo" title="todo" src=".github/logo.svg" width="300px" />
 </h1>
 
 <div align="center">
