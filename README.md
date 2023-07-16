@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="todo" title="todo" src=".github/logo.svg" width="300px" />
+    <img alt="todo" title="todo" src=".github/capa.png" />
 </h1>
 
 <div align="center">
@@ -49,7 +49,7 @@ Um projeto desenvolvido durante o <b>Bootcamp Ignite</b> da <b>Rocketseat</b>, o
 
 ## **🔖 Layout**
 
-Você pode visualizar o layout do projeto no formato através [desse link](https://www.figma.com/file/kMRUTTszJ5XyX0ECRtSKhY/Ignite-Timer-(JD)?type=design&node-id=313%3A964&mode=design&t=MJS7ZssyQrVnBAG9-1). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
+Você pode visualizar o layout do projeto no formato através [desse link](https://www.figma.com/file/kMRUTTszJ5XyX0ECRtSKhY/Ignite-Timer-(JD)?type=design&node-id=313%3A1874&mode=design&t=MJS7ZssyQrVnBAG9-1). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
 
 
 #### **Web**
